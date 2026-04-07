@@ -1,0 +1,88 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #FFC947;
+  color: #000000;
+}
+
+/* Global Typography Classes */
+.section-h1 {
+  font-size: clamp(2rem, 8vw, 4.5rem) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.05em !important;
+  line-height: 0.95 !important;
+  color: #ffffff !important;
+  margin-bottom: 2rem;
+}
+
+.section-h2 {
+  font-size: clamp(1.5rem, 6vw, 2.75rem) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1.1 !important;
+  color: #ffffff !important;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5em !important;
+  color: #FFC947 !important;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.premium-text-gradient {
+  background: linear-gradient(to right, white, white, rgba(255, 255, 255, 0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Layout Utilities */
+.container-main {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+/* Animations */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 50s linear infinite;
+}
